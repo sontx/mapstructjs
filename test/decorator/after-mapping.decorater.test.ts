@@ -1,4 +1,4 @@
-import { AfterMapping, AfterMappingConfig } from '../../src/decorator/after-mapping.decorater';
+import { AfterMapping, AfterMappingConfig } from '../../src/decorator/after-mapping.decorator';
 import { AFTER_MAPPING_METADATA } from '../../src/constants';
 
 import 'reflect-metadata';

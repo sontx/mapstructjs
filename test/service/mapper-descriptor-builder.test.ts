@@ -5,8 +5,8 @@ import { MapMethod } from '../../src/decorator/map-method.decorator';
 import { Mapping } from '../../src/decorator/mapping.decorator';
 import { Property } from '../../src/decorator/property.decorator';
 import { Mapper } from '../../src/decorator/mapper.decorator';
-import { AfterMapping } from '../../src/decorator/after-mapping.decorater';
-import { BeforeMapping } from '../../src/decorator/before-mapping.decorater';
+import { AfterMapping } from '../../src/decorator/after-mapping.decorator';
+import { BeforeMapping } from '../../src/decorator/before-mapping.decorator';
 import { Inject } from '../../src/decorator/inject.decorator';
 
 let mapperDescriptorBuilder: MapperDescriptorBuilder;

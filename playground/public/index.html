@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Playground for @sontx/mapstructjs"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Playground for @sontx/mapstructjs</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      // First set up the VSCode loader in a script tag
+      const getLoaderScript = document.createElement('script')
+      getLoaderScript.src = 'https://www.typescriptlang.org/js/vs.loader.js'
+      getLoaderScript.async = true
+      getLoaderScript.onload = () => {
+        // Now the loader is ready, tell require where it can get the version of monaco, and the sandbox
+        // This version uses the latest version of the sandbox, which is used on the TypeScript website
+
+        // For the monaco version you can use unpkg or the TypeSCript web infra CDN
+        // You can see the available releases for TypeScript here:
+        // https://typescript.azureedge.net/indexes/releases.json
+        //
+        require.config({
+          paths: {
+            vs: 'https://typescript.azureedge.net/cdn/4.9.4/monaco/min/vs',
+            // vs: 'https://unpkg.com/@typescript-deploys/monaco-editor@4.0.5/min/vs',
+            sandbox: 'https://www.typescriptlang.org/js/sandbox',
+          },
+          // This is something you need for monaco to work
+          ignoreDuplicateModules: ['vs/editor/editor.main'],
+        })
+
+        // Grab a copy of monaco, TypeScript and the sandbox
+        require(['vs/editor/editor.main', 'vs/language/typescript/tsWorker', 'sandbox/index'], async (
+          main,
+          _tsWorker,
+          sandboxFactory
+        ) => {
+          window.tsSandboxFactory = sandboxFactory;
+          window.tsMain = main;
+        })
+      }
+
+      document.body.appendChild(getLoaderScript)
+    </script>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

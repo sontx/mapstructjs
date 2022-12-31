@@ -1,0 +1,74 @@
+@mixin code-style() {
+  font-family: Consolas, 'Courier New', monospace;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: initial;
+  font-feature-settings: 'liga' 0, 'calt' 0;
+}
+
+.log-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  cursor: default;
+  transition: 0.2s background-color;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &:hover {
+    background-color: rgba(220, 220, 220, 0.25);
+  }
+
+  @include code-style();
+
+  .object-key,
+  .variable-value {
+    @include code-style();
+  }
+
+  .react-json-view {
+    background-color: transparent !important;
+  }
+
+  &__type {
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+
+  &--info {
+  }
+
+  &--warn {
+    color: #faad14;
+  }
+
+  &--error {
+    color: #ff4d4f;
+  }
+
+  &--debug {
+    color: #531dab;
+  }
+
+  &__part {
+    white-space: break-spaces;
+
+    .part__not_string {
+      color: #9582FA;
+    }
+  }
+}
+
+.icon-container {
+  .collapsed-icon,
+  .expanded-icon {
+    > svg {
+      color: rgba(26, 25, 26, 0.85) !important;
+    }
+  }
+}

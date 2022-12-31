@@ -125,10 +125,12 @@ export class DefaultInstanceResolver extends ServiceConfigurable implements Inst
   }
 
   register(type: Class, instanceOrFactory: any | Function) {
-    this.cachedInstances.set(type, {
-      instanceOrFactory,
-      initialized: false,
-    });
+    if (!this.cachedInstances.has(type)) {
+      this.cachedInstances.set(type, {
+        instanceOrFactory,
+        initialized: false,
+      });
+    }
   }
 
   unregister(type: Class) {

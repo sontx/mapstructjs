@@ -8,13 +8,15 @@
     "declaration": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "types": ["node", "jest"],
+    "types": ["node"],
+    "sourceMap": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "rootDir": "src"
   },
-  "include": ["src/**/*", "test/**/*"],
+  "include": ["src/**/*"],
 }

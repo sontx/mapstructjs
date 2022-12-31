@@ -1,5 +1,5 @@
 import { DEFAULT_TARGET_FACTORY_FN } from '../../src/function/target-factory.function';
-import {MappingContext} from "../../src/mapping-context";
+import { MappingContext } from '../../src/mapping-context';
 
 test('if valid arguments then return an new instance of passing type', () => {
   class Test {}

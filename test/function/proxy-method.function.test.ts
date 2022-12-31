@@ -1,5 +1,5 @@
 import { DEFAULT_PROXY_METHOD_FN } from '../../src/function/proxy-method.function';
-import {MappingContext} from "../../src/mapping-context";
+import { MappingContext } from '../../src/mapping-context';
 
 class Source {
   prop1: number;

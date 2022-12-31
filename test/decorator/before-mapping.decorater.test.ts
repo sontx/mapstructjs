@@ -1,7 +1,7 @@
 import { BEFORE_MAPPING_METADATA } from '../../src/constants';
 
 import 'reflect-metadata';
-import { BeforeMapping, BeforeMappingConfig } from '../../src/decorator/before-mapping.decorater';
+import { BeforeMapping, BeforeMappingConfig } from '../../src/decorator/before-mapping.decorator';
 import { DEFAULT_CONFIG } from '../../src/decorator/hook-mapping.decorator';
 
 class Source {}
