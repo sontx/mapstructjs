@@ -35,6 +35,7 @@ jobs:
           npm run playground
       - run: pwd
       - run: npm ci
+      - run: npm run build
       - name: Deploy playground
         uses: peaceiris/actions-gh-pages@v3
         with:
