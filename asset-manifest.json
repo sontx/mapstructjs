@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mapstructjs/static/css/main.90ec0ff6.css",
+    "main.js": "/mapstructjs/static/js/main.51343bbe.js",
+    "static/js/787.d6348e0e.chunk.js": "/mapstructjs/static/js/787.d6348e0e.chunk.js",
+    "index.html": "/mapstructjs/index.html",
+    "main.90ec0ff6.css.map": "/mapstructjs/static/css/main.90ec0ff6.css.map",
+    "main.51343bbe.js.map": "/mapstructjs/static/js/main.51343bbe.js.map",
+    "787.d6348e0e.chunk.js.map": "/mapstructjs/static/js/787.d6348e0e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90ec0ff6.css",
+    "static/js/main.51343bbe.js"
+  ]
+}
