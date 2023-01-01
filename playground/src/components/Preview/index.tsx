@@ -13,8 +13,8 @@ export function Preview({ jsCode, className, ...rest }: StandardProps & { jsCode
 
   useEffect(() => {
     try {
-      // eslint-disable-next-line no-eval
       setLogs([]);
+      // eslint-disable-next-line no-eval
       eval(bundleJs);
     } catch (e) {
       console.warn(e);
