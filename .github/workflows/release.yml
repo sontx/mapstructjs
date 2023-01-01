@@ -1,8 +1,11 @@
 name: Relase
 
 on:
-  release:
-    types: [ created ]
+  push:
+    branches: [ "main" ]
+    paths:
+    - "package.json"
+  workflow_dispatch:
 
 jobs:
   publish:
