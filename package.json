@@ -1,6 +1,6 @@
 {
   "name": "@sontx/mapstructjs",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Mapping source object to target object with javascript.",
   "main": "build/index.js",
   "scripts": {
