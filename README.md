@@ -1,4 +1,6 @@
 ## mapstructjs
+[![CI](https://github.com/sontx/mapstructjs/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/sontx/mapstructjs/actions/workflows/main.yml)
+[![npm version](https://badge.fury.io/js/@sontx%2Fmapstructjs.svg)](https://badge.fury.io/js/@sontx%2Fmapstructjs)
 
 Multi-layered applications often require mapping between different object models (e.g. entities and DTOs).
 Writing such mapping code is a tedious and error-prone task.
